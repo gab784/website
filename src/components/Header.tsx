@@ -54,14 +54,16 @@ const ProfileImage = styled.div`
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  font-weight: bold;
-  color: white;
+  overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
 
   @media (max-width: 768px) {
     margin: 0 auto;
@@ -228,7 +230,10 @@ const Header: React.FC<HeaderProps> = ({ language, onLanguageChange }) => {
       <Container>
         <ProfileCard>
           <ProfileImage>
-            JGC
+            <img 
+              src="/perfil2-modified.png" 
+              alt="Juan Gabriel Cabral - Senior Software Architect Engineer" 
+            />
           </ProfileImage>
           
           <ProfileInfo>
