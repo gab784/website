@@ -38,15 +38,66 @@ const ProfileCard = styled.div`
   padding: 3rem 2rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr auto;
   gap: 2rem;
   align-items: center;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
+
+  @media (max-width: 992px) {
+    grid-template-columns: auto 1fr;
+  }
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+`;
+
+const ContactInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 250px;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
+`;
+
+const ContactItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: white;
+  font-size: 0.9rem;
+  opacity: 0.9;
+
+  i {
+    width: 18px;
+    text-align: center;
+    opacity: 0.8;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`;
+
+const ContactLink = styled.a`
+  color: white;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+    text-decoration: underline;
   }
 `;
 
@@ -259,6 +310,30 @@ const Header: React.FC<HeaderProps> = ({ language, onLanguageChange }) => {
               </Button>
             </ButtonGroup>
           </ProfileInfo>
+
+          <ContactInfo>
+            <ContactItem>
+              <i className="fas fa-envelope"></i>
+              <ContactLink href="mailto:cabralgabriel783@gmail.com">
+                cabralgabriel783@gmail.com
+              </ContactLink>
+            </ContactItem>
+            
+            <ContactItem>
+              <i className="fab fa-whatsapp"></i>
+              <ContactLink href="https://wa.me/5493764841142" target="_blank" rel="noopener noreferrer">
+                (+54) 376 484-1142
+              </ContactLink>
+            </ContactItem>
+            
+            <ContactItem>
+              <i className="fas fa-map-marker-alt"></i>
+              <span style={{ opacity: 0.9 }}>
+                Las Tunas 10787<br />
+                Posadas, Misiones
+              </span>
+            </ContactItem>
+          </ContactInfo>
         </ProfileCard>
       </Container>
     </HeaderContainer>

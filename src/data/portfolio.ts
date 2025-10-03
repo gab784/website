@@ -14,15 +14,20 @@ export interface Experience {
 }
 
 export const skills: Skill[] = [
-  { name: "Go (Golang)", years: "8 years", percentage: 95 },
-  { name: "Node.js / Express", years: "10 years", percentage: 90 },
-  { name: "React / Next.js", years: "7 years", percentage: 88 },
+  { name: "PHP", years: "12 years", percentage: 100 },
+  { name: "Go (Golang)", years: "2 years", percentage: 40 },
+  { name: "PostgreSQL / Oracle PL-SQL / MySQL / SQL Server Transact-SQL", years: "10 years", percentage: 100 },
+  { name: "Node Js", years: "8 years", percentage: 90 },
+  { name: "React", years: "2 years", percentage: 40 },
+  { name: "Csharp", years: "2 years", percentage: 40 },
   { name: "TypeScript", years: "6 years", percentage: 85 },
-  { name: "AWS / Cloud", years: "8 years", percentage: 92 },
-  { name: "Docker / Kubernetes", years: "6 years", percentage: 80 },
-  { name: "PostgreSQL / MongoDB", years: "10 years", percentage: 87 },
-  { name: "Microservices", years: "8 years", percentage: 90 },
-  { name: "GraphQL / REST APIs", years: "9 years", percentage: 89 },
+  { name: "FastApi", years: "1 years", percentage: 20 },
+  { name: "Python", years: "1 years", percentage: 20 },
+  { name: "AWS / Cloud", years: "2 years", percentage: 40 },
+  { name: "Docker", years: "6 years", percentage: 80 },
+  { name: "Redis", years: "6 years", percentage: 80 },
+  { name: "Nginx", years: "6 years", percentage: 80 },
+  { name: "Microservices", years: "6 years", percentage: 90 },  
   { name: "DevOps / CI/CD", years: "7 years", percentage: 82 }
 ];
 
