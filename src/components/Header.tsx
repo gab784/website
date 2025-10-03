@@ -231,7 +231,7 @@ const Header: React.FC<HeaderProps> = ({ language, onLanguageChange }) => {
         <ProfileCard>
           <ProfileImage>
             <img 
-              src="/perfil2-modified.png" 
+              src="/profile.png" 
               alt="Juan Gabriel Cabral - Senior Software Architect Engineer" 
             />
           </ProfileImage>
