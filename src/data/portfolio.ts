@@ -35,9 +35,9 @@ export const experiences: Experience[] = [
   {
     id: "exp1",
     company: "TechCorp Solutions",
-    position: "Senior Software Architect",
-    period: "2020 - Present",
-    description: "Leading architecture design for enterprise-scale applications serving 1M+ users. Implemented microservices architecture reducing system latency by 40% and improved scalability.",
+    position: "Arquitecto de Software Senior",
+    period: "2020 - Presente",
+    description: "Lidero el diseño de arquitecturas para aplicaciones empresariales que sirven a más de 1M+ usuarios. Implementé arquitectura de microservicios reduciendo la latencia del sistema en un 40% y mejoré la escalabilidad.",
     technologies: ["Go", "AWS", "Kubernetes", "React", "PostgreSQL"]
   },
   {
@@ -45,23 +45,23 @@ export const experiences: Experience[] = [
     company: "Innovation Labs",
     position: "Lead Full Stack Developer",
     period: "2018 - 2020",
-    description: "Led a team of 8 developers building cloud-native applications. Architected and implemented CI/CD pipelines, reducing deployment time by 60%.",
+    description: "Dirigí un equipo de 8 desarrolladores construyendo aplicaciones cloud-native. Arquitecté e implementé pipelines CI/CD, reduciendo el tiempo de deployment en 60%.",
     technologies: ["Node.js", "React", "Docker", "MongoDB", "AWS"]
   },
   {
     id: "exp3",
     company: "StartupX",
-    position: "Software Engineer",
+    position: "Ingeniero de Software",
     period: "2015 - 2018",
-    description: "Developed scalable backend services and modern web applications. Collaborated with product teams to deliver features used by 500K+ active users.",
+    description: "Desarrollé servicios backend escalables y aplicaciones web modernas. Colaboré con equipos de producto para entregar funcionalidades usadas por 500K+ usuarios activos.",
     technologies: ["JavaScript", "Python", "MySQL", "Redis", "Git"]
   },
   {
     id: "exp4",
     company: "DevSolutions",
-    position: "Junior Developer",
+    position: "Desarrollador Junior",
     period: "2012 - 2015",
-    description: "Built responsive web applications and RESTful APIs. Gained expertise in software development best practices and agile methodologies.",
+    description: "Construí aplicaciones web responsivas y APIs RESTful. Adquirí experiencia en mejores prácticas de desarrollo de software y metodologías ágiles.",
     technologies: ["PHP", "JavaScript", "MySQL", "HTML/CSS", "jQuery"]
   }
 ];

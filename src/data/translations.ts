@@ -76,8 +76,8 @@ export const translations: Record<Language, TranslationData> = {
     experienceTitle: "Experiencia Profesional",
 
     aboutTitle: "Sobre Mí",
-    aboutDescription1: "¡Hola! Soy Juan Gabriel Cabral, un apasionado Ingeniero Arquitecto de Software Senior con más de 12 años de experiencia diseñando y desarrollando soluciones empresariales escalables. Mi expertise abarca desarrollo full-stack, arquitectura de microservicios y tecnologías en la nube.",
-    aboutDescription2: "Me especializo en tecnologías modernas incluyendo Go, Node.js, React, AWS, y tengo amplia experiencia en arquitectura de sistemas, diseño de bases de datos y prácticas DevOps. Estoy comprometido a entregar soluciones de software de alta calidad y sostenibles que impulsen el éxito empresarial.",
+    aboutDescription1: "¡Hola! Soy Juan Gabriel Cabral, un apasionado Ingeniero Arquitecto de Software Senior con más de 12 años de experiencia diseñando y desarrollando soluciones empresariales escalables. Mi expertise abarca desarrollo full-stack, arquitectura de microservicios y tecnologías en la nube, con especial enfoque en Go, Node.js, React y AWS.",
+    aboutDescription2: "Mi filosofía profesional se centra en que la arquitectura no se trata de complejidad, sino de resolver problemas complejos con soluciones elegantes y simples. He liderado equipos de desarrollo, implementado arquitecturas que sirven a millones de usuarios, y me apasiona mentorear a otros desarrolladores en las mejores prácticas de la industria.",
 
     contactTitle: "Contacto",
     contactDescription: "¿Listo para llevar tu proyecto al siguiente nivel? Me encantaría conocer más sobre tus desafíos técnicos y cómo puedo ayudarte a crear soluciones innovadoras.",

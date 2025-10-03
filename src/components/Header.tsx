@@ -184,10 +184,21 @@ const Button = styled.a<{ $variant?: 'primary' | 'secondary' | 'outlined' }>`
   cursor: pointer;
   font-size: 0.85rem;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  i {
+    font-size: 0.9rem;
+  }
 
   @media (max-width: 480px) {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
+    
+    i {
+      font-size: 0.8rem;
+    }
   }
 
   ${props => {
@@ -267,6 +278,20 @@ const Header: React.FC<HeaderProps> = ({ language, onLanguageChange }) => {
     }
   };
 
+  // CV file based on selected language
+  const getCVFile = () => {
+    switch (language) {
+      case 'es':
+        return '/CV_ES_Juan_Gabriel_Cabral_2025.pdf'; // Spanish CV PDF
+      case 'en':
+        return '/Juan_Gabriel_Cabral_Senior_Architect_CV_2025.pdf'; // English CV
+      case 'pt':
+        return '/CV_PT_Juan_Gabriel_Cabral_2025.pdf'; // Portuguese CV PDF
+      default:
+        return '/CV_ES_Juan_Gabriel_Cabral_2025.pdf';
+    }
+  };
+
   return (
     <HeaderContainer>
       <LanguageSelector>
@@ -323,6 +348,13 @@ const Header: React.FC<HeaderProps> = ({ language, onLanguageChange }) => {
               </ContactItem>
               
               <ContactItem>
+                <i className="fab fa-github"></i>
+                <ContactLink href="https://github.com/gab784/" target="_blank" rel="noopener noreferrer">
+                  github.com/gab784
+                </ContactLink>
+              </ContactItem>
+              
+              <ContactItem>
                 <i className="fas fa-map-marker-alt"></i>
                 <span style={{ opacity: 0.9 }}>
                   Las Tunas 10787<br />
@@ -334,20 +366,20 @@ const Header: React.FC<HeaderProps> = ({ language, onLanguageChange }) => {
 
           {/* Sección inferior: Botones lineales */}
           <ButtonGroup>
-            <Button href="/CV_ES_2025.pdf" download>
-              {t.downloadCV}
+            <Button href={getCVFile()} download>
+              <i className="fas fa-download"></i> {t.downloadCV}
             </Button>
             <Button $variant="secondary" onClick={() => scrollToSection('contact')}>
-              {t.contact}
+              <i className="fas fa-envelope"></i> {t.contact}
             </Button>
-            <Button $variant="outlined" onClick={() => scrollToSection('video')}>
-              {t.videoPresentation}
-            </Button>
+            {/* <Button $variant="outlined" onClick={() => scrollToSection('video')}>
+              <i className="fas fa-video"></i> {t.videoPresentation}
+            </Button> */}
             <Button $variant="outlined" onClick={() => scrollToSection('experience')}>
-              {t.viewExperience}
+              <i className="fas fa-briefcase"></i> {t.viewExperience}
             </Button>
             <Button $variant="outlined" onClick={() => scrollToSection('skills')}>
-              {t.technicalSkills}
+              <i className="fas fa-code"></i> {t.technicalSkills}
             </Button>
           </ButtonGroup>
         </ProfileCard>
