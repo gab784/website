@@ -37,20 +37,25 @@ const ProfileCard = styled.div`
   border-radius: 20px;
   padding: 3rem 2rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  max-width: 1100px;
+  text-align: center;
+  max-width: 900px;
   margin: 0 auto;
+  gap: 1.5rem;
+`;
 
-  @media (max-width: 992px) {
-    grid-template-columns: auto 1fr;
-  }
+const ProfileSection = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 800px;
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    text-align: center;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 `;
 
@@ -58,10 +63,12 @@ const ContactInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  min-width: 250px;
+  min-width: 220px;
+  text-align: left;
 
-  @media (max-width: 992px) {
-    display: none;
+  @media (max-width: 768px) {
+    text-align: center;
+    min-width: auto;
   }
 `;
 
@@ -122,11 +129,8 @@ const ProfileImage = styled.div`
 `;
 
 const ProfileInfo = styled.div`
-  text-align: left;
-
-  @media (max-width: 768px) {
-    text-align: center;
-  }
+  text-align: center;
+  flex: 1;
 `;
 
 const Name = styled.h1`
@@ -152,31 +156,39 @@ const Title = styled.h2`
 
 const Subtitle = styled.p`
   font-size: 1rem;
-  margin: 0 0 2rem 0;
+  margin: 0;
   opacity: 0.8;
   line-height: 1.6;
 `;
 
 const ButtonGroup = styled.div`
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 700px;
 
   @media (max-width: 768px) {
-    justify-content: center;
+    gap: 0.6rem;
   }
 `;
 
 const Button = styled.a<{ $variant?: 'primary' | 'secondary' | 'outlined' }>`
-  padding: 0.8rem 1.5rem;
-  border-radius: 25px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
   border: 2px solid transparent;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+
+  @media (max-width: 480px) {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
 
   ${props => {
     switch (props.$variant) {
@@ -280,60 +292,64 @@ const Header: React.FC<HeaderProps> = ({ language, onLanguageChange }) => {
 
       <Container>
         <ProfileCard>
-          <ProfileImage>
-            <img 
-              src="/profile.png" 
-              alt="Juan Gabriel Cabral - Senior Software Architect Engineer" 
-            />
-          </ProfileImage>
-          
-          <ProfileInfo>
-            <Name>{t.headerName}</Name>
-            <Title>{t.headerTitle}</Title>
-            <Subtitle>{t.headerSubtitle}</Subtitle>
+          {/* Sección superior: Foto + Info + Contacto */}
+          <ProfileSection>
+            <ProfileImage>
+              <img 
+                src="/profile.png" 
+                alt="Juan Gabriel Cabral - Senior Software Architect Engineer" 
+              />
+            </ProfileImage>
             
-            <ButtonGroup>
-              <Button href="/CV_ES_2025.pdf" download>
-                {t.downloadCV}
-              </Button>
-              <Button $variant="secondary" onClick={() => scrollToSection('contact')}>
-                {t.contact}
-              </Button>
-              <Button $variant="outlined" onClick={() => scrollToSection('video')}>
-                {t.videoPresentation}
-              </Button>
-              <Button $variant="outlined" onClick={() => scrollToSection('experience')}>
-                {t.viewExperience}
-              </Button>
-              <Button $variant="outlined" onClick={() => scrollToSection('skills')}>
-                {t.technicalSkills}
-              </Button>
-            </ButtonGroup>
-          </ProfileInfo>
+            <ProfileInfo>
+              <Name>{t.headerName}</Name>
+              <Title>{t.headerTitle}</Title>
+              <Subtitle>{t.headerSubtitle}</Subtitle>
+            </ProfileInfo>
 
-          <ContactInfo>
-            <ContactItem>
-              <i className="fas fa-envelope"></i>
-              <ContactLink href="mailto:cabralgabriel783@gmail.com">
-                cabralgabriel783@gmail.com
-              </ContactLink>
-            </ContactItem>
-            
-            <ContactItem>
-              <i className="fab fa-whatsapp"></i>
-              <ContactLink href="https://wa.me/5493764841142" target="_blank" rel="noopener noreferrer">
-                (+54) 376 484-1142
-              </ContactLink>
-            </ContactItem>
-            
-            <ContactItem>
-              <i className="fas fa-map-marker-alt"></i>
-              <span style={{ opacity: 0.9 }}>
-                Las Tunas 10787<br />
-                Posadas, Misiones
-              </span>
-            </ContactItem>
-          </ContactInfo>
+            <ContactInfo>
+              <ContactItem>
+                <i className="fas fa-envelope"></i>
+                <ContactLink href="mailto:cabralgabriel783@gmail.com">
+                  cabralgabriel783@gmail.com
+                </ContactLink>
+              </ContactItem>
+              
+              <ContactItem>
+                <i className="fab fa-whatsapp"></i>
+                <ContactLink href="https://wa.me/5493764841142" target="_blank" rel="noopener noreferrer">
+                  (+54) 376 484-1142
+                </ContactLink>
+              </ContactItem>
+              
+              <ContactItem>
+                <i className="fas fa-map-marker-alt"></i>
+                <span style={{ opacity: 0.9 }}>
+                  Las Tunas 10787<br />
+                  Posadas, Misiones
+                </span>
+              </ContactItem>
+            </ContactInfo>
+          </ProfileSection>
+
+          {/* Sección inferior: Botones lineales */}
+          <ButtonGroup>
+            <Button href="/CV_ES_2025.pdf" download>
+              {t.downloadCV}
+            </Button>
+            <Button $variant="secondary" onClick={() => scrollToSection('contact')}>
+              {t.contact}
+            </Button>
+            <Button $variant="outlined" onClick={() => scrollToSection('video')}>
+              {t.videoPresentation}
+            </Button>
+            <Button $variant="outlined" onClick={() => scrollToSection('experience')}>
+              {t.viewExperience}
+            </Button>
+            <Button $variant="outlined" onClick={() => scrollToSection('skills')}>
+              {t.technicalSkills}
+            </Button>
+          </ButtonGroup>
         </ProfileCard>
       </Container>
     </HeaderContainer>
