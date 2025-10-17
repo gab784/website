@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { useLanguage } from './hooks/useLanguage';
 import Header from './components/Header';
 import Philosophy from './components/Philosophy';
@@ -40,40 +40,26 @@ const GlobalStyle = createGlobalStyle`
     font-family: inherit;
   }
 
-  /* Font Awesome Icons */
   @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 `;
 
-const AppContainer = styled.div`
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-`;
 
-const MainContent = styled.main`
-  flex: 1;
-`;
 
 function App() {
   const { language, changeLanguage } = useLanguage();
 
-  // You can set a YouTube video ID here when ready
-  // const youtubeVideoId = 'YOUR_VIDEO_ID_HERE';
-
   return (
-    <AppContainer>
+    <div className="App">
       <GlobalStyle />
       <Header language={language} onLanguageChange={changeLanguage} />
-      <MainContent>
-        <Philosophy language={language} />
-        <VideoSection language={language} /* videoId={youtubeVideoId} */ />
-        <Skills language={language} />
-        <Experience language={language} />
-        <About language={language} />
-        <Contact language={language} />
-      </MainContent>
+      <Philosophy language={language} />
+      <Skills language={language} />
+      <Experience language={language} />
+        <VideoSection language={language} />
+      <About language={language} />
+      <Contact language={language} />
       <Footer language={language} />
-    </AppContainer>
+    </div>
   );
 }
 

@@ -208,7 +208,6 @@ const Contact: React.FC<ContactProps> = ({ language }) => {
           <Title>{t.contactTitle}</Title>
           <Description>{t.contactDescription}</Description>
           
-          {/* Contact Information */}
           <ContactInfoGrid>
             <ContactInfoItem>
               <ContactInfoIcon className="fas fa-map-marker-alt" />

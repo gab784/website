@@ -190,9 +190,9 @@ const Experience: React.FC<ExperienceProps> = ({ language }) => {
                 <TimelineMarker />
                 <TimelineContent $index={index}>
                   <CompanyName>{exp.company}</CompanyName>
-                  <Position>{exp.position}</Position>
+                  <Position>{exp.position[language]}</Position>
                   <Period>{exp.period}</Period>
-                  <Description>{exp.description}</Description>
+                  <Description>{exp.description[language]}</Description>
                   <TechnologiesContainer>
                     {exp.technologies.map((tech, techIndex) => (
                       <TechnologyTag key={techIndex}>{tech}</TechnologyTag>

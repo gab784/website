@@ -53,8 +53,8 @@ export interface TranslationData {
 export const translations: Record<Language, TranslationData> = {
   es: {
     headerName: "Juan Gabriel Cabral",
-    headerTitle: "Ingeniero Arquitecto de Software Senior",
-    headerSubtitle: "12+ años diseñando y desarrollando soluciones empresariales escalables",
+    headerTitle: "Técnico Superior en Análisis y Diseño de Sistemas",
+    headerSubtitle: "Especializado en la ingeniería de software",
     downloadCV: "Descargar CV",
     contact: "Contactar",
     videoPresentation: "🎬 Video Presentación",
@@ -62,7 +62,7 @@ export const translations: Record<Language, TranslationData> = {
     technicalSkills: "Habilidades Técnicas",
 
     philosophyTitle: "Filosofía Profesional",
-    philosophyQuote: "La arquitectura no se trata de complejidad; se trata de resolver problemas complejos con soluciones elegantes y simples.",
+    philosophyQuote: "Como Técnico Superior en Análisis y Diseño de Sistemas especializado en ingeniería de software, creo que la verdadera arquitectura no se trata de complejidad, sino de resolver problemas complejos con soluciones elegantes, escalables y mantenibles que perduren en el tiempo.",
     philosophyAuthor: "- Juan Gabriel Cabral",
 
     videoSectionTitle: "Conóceme Personalmente",
@@ -95,8 +95,8 @@ export const translations: Record<Language, TranslationData> = {
 
   en: {
     headerName: "Juan Gabriel Cabral",
-    headerTitle: "Senior Software Architect Engineer",
-    headerSubtitle: "12+ years designing and developing scalable enterprise solutions",
+    headerTitle: "Systems Analysis and Design Technician",
+    headerSubtitle: "Specialized in software engineering",
     downloadCV: "Download CV",
     contact: "Get in touch",
     videoPresentation: "🎬 Introduction Video",
@@ -104,7 +104,7 @@ export const translations: Record<Language, TranslationData> = {
     technicalSkills: "Technical Skills",
 
     philosophyTitle: "Professional Philosophy",
-    philosophyQuote: "Architecture is not about complexity; it's about solving complex problems with elegant, simple solutions.",
+    philosophyQuote: "As a Senior Systems Analysis and Design Technician specialized in software engineering, I believe that true architecture is not about complexity, but about solving complex problems with elegant, scalable, and maintainable solutions that stand the test of time.",
     philosophyAuthor: "- Juan Gabriel Cabral",
 
     videoSectionTitle: "Get to Know Me Personally",
@@ -118,7 +118,7 @@ export const translations: Record<Language, TranslationData> = {
     experienceTitle: "Professional Experience",
 
     aboutTitle: "About Me",
-    aboutDescription1: "Hello! I'm Juan Gabriel Cabral, a passionate Senior Software Architect Engineer with over 12 years of experience designing and developing scalable enterprise solutions. My expertise spans full-stack development, microservices architecture, and cloud technologies.",
+    aboutDescription1: "Hello! I'm Juan Gabriel Cabral, a passionate Software Engineer with over 12 years of experience designing and developing scalable enterprise solutions. My expertise spans full-stack development, microservices architecture, and cloud technologies.",
     aboutDescription2: "I specialize in modern technologies including Go, Node.js, React, AWS, and have extensive experience in system architecture, database design, and DevOps practices. I'm committed to delivering high-quality, sustainable software solutions that drive business success.",
 
     contactTitle: "Contact",
@@ -132,13 +132,13 @@ export const translations: Record<Language, TranslationData> = {
     scheduleDescription: "Book a free 30-minute consultation to discuss your project",
     scheduleButton: "Schedule Appointment",
 
-    footerDescription: "Senior Software Architect Engineer specializing in scalable solutions and modern architectures."
+    footerDescription: "Software Engineer specializing in scalable solutions and modern architectures."
   },
 
   pt: {
     headerName: "Juan Gabriel Cabral",
-    headerTitle: "Engenheiro Arquiteto de Software Sênior",
-    headerSubtitle: "12+ anos projetando e desenvolvendo soluções empresariais escaláveis",
+    headerTitle: "Técnico Superior em Análise e Design de Sistemas",
+    headerSubtitle: "Especializado em engenharia de software",
     downloadCV: "Baixar CV",
     contact: "Entre em contato",
     videoPresentation: "🎬 Vídeo Apresentação",
@@ -146,7 +146,7 @@ export const translations: Record<Language, TranslationData> = {
     technicalSkills: "Habilidades Técnicas",
 
     philosophyTitle: "Filosofia Profissional",
-    philosophyQuote: "Arquitetura não é sobre complexidade; é sobre resolver problemas complexos com soluções elegantes e simples.",
+    philosophyQuote: "Como Técnico Superior em Análise e Design de Sistemas especializado em engenharia de software, acredito que a verdadeira arquitetura não se trata de complexidade, mas de resolver problemas complexos com soluções elegantes, escaláveis e sustentáveis que resistem ao teste do tempo.",
     philosophyAuthor: "- Juan Gabriel Cabral",
 
     videoSectionTitle: "Conheça-me Pessoalmente",

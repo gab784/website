@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Language } from '../hooks/useLanguage';
 import { getTranslation } from '../data/translations';
@@ -120,40 +120,7 @@ const VideoTitle = styled.h3`
   }
 `;
 
-const VideoDescription = styled.p`
-  color: #666;
-  font-size: 1.1rem;
-  max-width: 500px;
-  line-height: 1.6;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  z-index: 1;
-  position: relative;
 
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
-`;
-
-const ComingSoonBadge = styled.div`
-  display: inline-block;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-  padding: 0.7rem 1.5rem;
-  border-radius: 25px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  border: none;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-  z-index: 1;
-  position: relative;
-  transition: all 0.3s ease;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-  }
-`;
 
 const VideoEmbed = styled.iframe<{ $show: boolean }>`
   width: 100%;
@@ -175,16 +142,7 @@ interface VideoSectionProps {
 
 const VideoSection: React.FC<VideoSectionProps> = ({ language, videoId }) => {
   const t = getTranslation(language);
-  const [showVideo, setShowVideo] = useState(!!videoId);
-
-  // Function to set YouTube video (for future use)
-  const setYouTubeVideo = (newVideoId: string) => {
-    if (newVideoId && newVideoId.trim() !== '') {
-      setShowVideo(true);
-    } else {
-      setShowVideo(false);
-    }
-  };
+  const showVideo = true;
 
   return (
     <VideoContainer id="video">
@@ -197,17 +155,11 @@ const VideoSection: React.FC<VideoSectionProps> = ({ language, videoId }) => {
             <VideoPlaceholder $show={!showVideo}>
               <VideoIcon className="fab fa-youtube" />
               <VideoTitle>{t.videoPlaceholderTitle}</VideoTitle>
-              <VideoDescription>
-                {t.videoPlaceholderDescription}
-              </VideoDescription>
-              <ComingSoonBadge>
-                {t.comingSoon}
-              </ComingSoonBadge>
             </VideoPlaceholder>
             
             <VideoEmbed
               $show={showVideo}
-              src={videoId ? `https://www.youtube.com/embed/${videoId}` : ''}
+              src={`https://www.youtube.com/embed/RMIaadus7uc`}
               title="Juan Gabriel Cabral - Video Presentation"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

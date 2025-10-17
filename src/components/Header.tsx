@@ -278,18 +278,13 @@ const Header: React.FC<HeaderProps> = ({ language, onLanguageChange }) => {
     }
   };
 
-  // CV file based on selected language
   const getCVFile = () => {
-    switch (language) {
-      case 'es':
-        return '/CV_ES_Juan_Gabriel_Cabral_2025.pdf'; // Spanish CV PDF
-      case 'en':
-        return '/Juan_Gabriel_Cabral_Senior_Architect_CV_2025.pdf'; // English CV
-      case 'pt':
-        return '/CV_PT_Juan_Gabriel_Cabral_2025.pdf'; // Portuguese CV PDF
-      default:
-        return '/CV_ES_Juan_Gabriel_Cabral_2025.pdf';
-    }
+    const cvFiles = {
+      es: '/CV_ES_Juan_Gabriel_Cabral_2025.pdf',
+      en: '/Juan_Gabriel_Cabral_Senior_Architect_CV_2025.pdf',
+      pt: '/CV_PT_Juan_Gabriel_Cabral_2025.pdf'
+    };
+    return cvFiles[language] || cvFiles.es;
   };
 
   return (
@@ -317,12 +312,11 @@ const Header: React.FC<HeaderProps> = ({ language, onLanguageChange }) => {
 
       <Container>
         <ProfileCard>
-          {/* Sección superior: Foto + Info + Contacto */}
           <ProfileSection>
             <ProfileImage>
               <img 
                 src="/profile.png" 
-                alt="Juan Gabriel Cabral - Senior Software Architect Engineer" 
+                alt="Juan Gabriel Cabral - Software Engineer" 
               />
             </ProfileImage>
             
@@ -364,7 +358,6 @@ const Header: React.FC<HeaderProps> = ({ language, onLanguageChange }) => {
             </ContactInfo>
           </ProfileSection>
 
-          {/* Sección inferior: Botones lineales */}
           <ButtonGroup>
             <Button href={getCVFile()} download>
               <i className="fas fa-download"></i> {t.downloadCV}
@@ -372,9 +365,9 @@ const Header: React.FC<HeaderProps> = ({ language, onLanguageChange }) => {
             <Button $variant="secondary" onClick={() => scrollToSection('contact')}>
               <i className="fas fa-envelope"></i> {t.contact}
             </Button>
-            {/* <Button $variant="outlined" onClick={() => scrollToSection('video')}>
+            <Button $variant="outlined" onClick={() => scrollToSection('video')}>
               <i className="fas fa-video"></i> {t.videoPresentation}
-            </Button> */}
+            </Button>
             <Button $variant="outlined" onClick={() => scrollToSection('experience')}>
               <i className="fas fa-briefcase"></i> {t.viewExperience}
             </Button>
