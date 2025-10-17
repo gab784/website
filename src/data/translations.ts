@@ -34,6 +34,10 @@ export interface TranslationData {
   aboutDescription1: string;
   aboutDescription2: string;
 
+  // Hobbies
+  hobbiesTitle: string;
+  hobbiesDescription: string;
+
   // Contact
   contactTitle: string;
   contactDescription: string;
@@ -79,6 +83,9 @@ export const translations: Record<Language, TranslationData> = {
     aboutDescription1: "¡Hola! Soy Juan Gabriel Cabral, un apasionado Ingeniero Arquitecto de Software Senior con más de 12 años de experiencia diseñando y desarrollando soluciones empresariales escalables. Mi expertise abarca desarrollo full-stack, arquitectura de microservicios y tecnologías en la nube, con especial enfoque en Go, Node.js, React y AWS.",
     aboutDescription2: "Mi filosofía profesional se centra en que la arquitectura no se trata de complejidad, sino de resolver problemas complejos con soluciones elegantes y simples. He liderado equipos de desarrollo, implementado arquitecturas que sirven a millones de usuarios, y me apasiona mentorear a otros desarrolladores en las mejores prácticas de la industria.",
 
+    hobbiesTitle: "Mis Intereses",
+    hobbiesDescription: "Cuando no estoy programando, disfruto de actividades que me mantienen equilibrado y creativo. Desde ciclismo hasta fotografía, estas experiencias enriquecen mi perspectiva profesional.",
+
     contactTitle: "Contacto",
     contactDescription: "¿Listo para llevar tu proyecto al siguiente nivel? Me encantaría conocer más sobre tus desafíos técnicos y cómo puedo ayudarte a crear soluciones innovadoras.",
     addressLabel: "Dirección",
@@ -121,6 +128,9 @@ export const translations: Record<Language, TranslationData> = {
     aboutDescription1: "Hello! I'm Juan Gabriel Cabral, a passionate Software Engineer with over 12 years of experience designing and developing scalable enterprise solutions. My expertise spans full-stack development, microservices architecture, and cloud technologies.",
     aboutDescription2: "I specialize in modern technologies including Go, Node.js, React, AWS, and have extensive experience in system architecture, database design, and DevOps practices. I'm committed to delivering high-quality, sustainable software solutions that drive business success.",
 
+    hobbiesTitle: "My Interests",
+    hobbiesDescription: "When I'm not coding, I enjoy activities that keep me balanced and creative. From cycling to photography, these experiences enrich my professional perspective.",
+
     contactTitle: "Contact",
     contactDescription: "Ready to take your project to the next level? I'd love to learn more about your technical challenges and how I can help you create innovative solutions.",
     addressLabel: "Address",
@@ -162,6 +172,9 @@ export const translations: Record<Language, TranslationData> = {
     aboutTitle: "Sobre Mim",
     aboutDescription1: "Olá! Sou Juan Gabriel Cabral, um apaixonado Engenheiro Arquiteto de Software Sênior com mais de 12 anos de experiência projetando e desenvolvendo soluções empresariais escaláveis. Minha expertise abrange desenvolvimento full-stack, arquitetura de microsserviços e tecnologias em nuvem.",
     aboutDescription2: "Especializo-me em tecnologias modernas incluindo Go, Node.js, React, AWS, e tenho ampla experiência em arquitetura de sistemas, design de banco de dados e práticas DevOps. Estou comprometido em entregar soluções de software de alta qualidade e sustentáveis que impulsionem o sucesso dos negócios.",
+
+    hobbiesTitle: "Meus Interesses",
+    hobbiesDescription: "Quando não estou programando, desfruto de atividades que me mantêm equilibrado e criativo. Do ciclismo à fotografia, essas experiências enriquecem minha perspectiva profissional.",
 
     contactTitle: "Contato",
     contactDescription: "Pronto para levar seu projeto ao próximo nível? Adoraria saber mais sobre seus desafios técnicos e como posso ajudá-lo a criar soluções inovadoras.",

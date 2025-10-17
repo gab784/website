@@ -7,6 +7,7 @@ import VideoSection from './components/VideoSection';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import About from './components/About';
+import Hobbies from './components/Hobbies';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -57,6 +58,7 @@ function App() {
       <Experience language={language} />
         <VideoSection language={language} />
       <About language={language} />
+      <Hobbies />
       <Contact language={language} />
       <Footer language={language} />
     </div>
